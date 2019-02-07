@@ -8,8 +8,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminLogIn.LoginSceneController">
    <children>
-      <ImageView fx:id="imgviewAvatar" fitHeight="109.0" fitWidth="145.0" layoutX="127.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="0.0" />
-      <Text layoutX="145.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EASV ADMIN LOGIN" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="146.58984375" AnchorPane.topAnchor="132.05078125" />
+      <ImageView fx:id="imgviewAvatar" fitHeight="109.0" fitWidth="145.0" layoutX="145.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="0.0" />
+      <Text layoutX="134.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EASV ADMIN LOGIN" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="157.58984375" AnchorPane.topAnchor="132.05078125" />
       <Text layoutX="32.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher ID" />
       <TextField fx:id="txtfldTeacherID" layoutX="33.0" layoutY="175.0" prefHeight="26.0" prefWidth="334.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.60000000000002" />
       <TextField fx:id="txtfldPassword" layoutX="33.0" layoutY="230.0" prefHeight="26.0" prefWidth="334.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.60000000000002" />

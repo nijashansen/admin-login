@@ -36,7 +36,7 @@ public class LoginSceneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        imgviewAvatar.setImage(new Image("src/resus/Login-avatar.png"));
+        imgviewAvatar.setImage(new Image("resus/Login-avatar.png"));
     }    
 
     @FXML
