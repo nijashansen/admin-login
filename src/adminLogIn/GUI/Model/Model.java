@@ -6,6 +6,7 @@
 package adminLogIn.GUI.Model;
 
 import adminLogIn.BE.Student;
+import adminLogIn.BE.Teacher;
 import adminLogIn.BLL.BLLManager;
 import java.util.List;
 
@@ -21,4 +22,16 @@ public class Model {
         return bllMan.getAllStudents();
     }
     
+    public String getTeacherID(Teacher teacher) {
+        return bllMan.getTeacherID(teacher);
+    }
+    
+    public String getTeacherPassword(Teacher teacher) {
+        return bllMan.getTeacherPassword(teacher);
+    }
+    
+    public Teacher generateTeachers() {
+        System.out.println("hej3");
+        return bllMan.generateTeachers();
+    }
 }

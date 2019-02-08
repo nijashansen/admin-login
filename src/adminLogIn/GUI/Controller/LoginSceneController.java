@@ -5,6 +5,8 @@
  */
 package adminLogIn.GUI.Controller;
 
+import adminLogIn.BE.Teacher;
+import adminLogIn.GUI.Model.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -30,6 +32,12 @@ public class LoginSceneController implements Initializable {
     private TextField txtfldPassword;
     @FXML
     private Button btnLogin;
+    
+    private Model model;
+    
+    private Teacher teacher;
+    
+    
 
     /**
      * Initializes the controller class.
@@ -37,10 +45,22 @@ public class LoginSceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         imgviewAvatar.setImage(new Image("resus/Login-avatar.png"));
+        model = new Model();
+        teacher = new Teacher();
+        teacher = model.generateTeachers();
     }    
 
     @FXML
     private void handleLoginButton(MouseEvent event) {
+        String username = txtfldTeacherID.getText();
+        String password = txtfldPassword.getText();
+        
+        if (username.equals(model.getTeacherID(teacher)) && password.equals(model.getTeacherPassword(teacher))) {
+            System.out.println("welcome");
+        } else {
+            System.out.println("incorrect login");
+        }
+        
     }
     
     

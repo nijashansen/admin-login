@@ -6,17 +6,37 @@
 package adminLogIn.BLL;
 
 import adminLogIn.BE.Student;
+import adminLogIn.BE.Teacher;
+import adminLogIn.DAL.TeacherDAO;
 import java.util.List;
 
 /**
  *
  * @author Nijas Hansen
  */
-public class BLLManager implements BllManagerMockInterface{
+public class BLLManager{
+    
+    TeacherDAO teachDAO = new TeacherDAO();
 
-    @Override
+    
     public List<Student> getAllStudents() {
         return getAllStudents();
     }
+
+    public String getTeacherID(Teacher teacher) {
+        return teacher.getTeacherID();
+    }
+
+    
+    public String getTeacherPassword(Teacher teacher) {
+        return teacher.getPassword();
+    }
+
+    public Teacher generateTeachers() {
+        System.out.println("hej2");
+        return teachDAO.generateTeachers();
+    }
+    
+    
     
 }

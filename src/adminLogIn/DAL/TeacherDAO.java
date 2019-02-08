@@ -6,6 +6,7 @@
 package adminLogIn.DAL;
 
 import adminLogIn.BE.Student;
+import adminLogIn.BE.Teacher;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Nijas Hansen
  */
-public class TeacherDAO implements TeacherDAOMock{
+public class TeacherDAO {
     
     List<Student> students = new ArrayList<>();
 
@@ -21,4 +22,15 @@ public class TeacherDAO implements TeacherDAOMock{
         return getAllStudents();
     }
     
+    public Teacher generateTeachers() {
+        System.out.println("hej1");
+        
+        Teacher henriksen = new Teacher();
+        henriksen.setName("Henriksen");
+        henriksen.setTeacherID("Henriksen");
+        henriksen.setPassword("Password");
+        
+        
+        return henriksen;
+    }
 }
