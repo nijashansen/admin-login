@@ -19,7 +19,7 @@ public class OwsMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/View/LoginScene.fxml"));
         
         Scene scene = new Scene(root);
         
