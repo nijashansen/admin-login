@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminLogIn.LoginSceneController">
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminLogIn.GUI.Controller.LoginSceneController">
    <children>
       <ImageView fx:id="imgviewAvatar" fitHeight="109.0" fitWidth="145.0" layoutX="145.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="0.0" />
       <Text layoutX="134.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EASV ADMIN LOGIN" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="157.58984375" AnchorPane.topAnchor="132.05078125" />
