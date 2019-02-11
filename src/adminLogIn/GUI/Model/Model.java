@@ -31,7 +31,6 @@ public class Model {
     }
     
     public Teacher generateTeachers() {
-        System.out.println("hej3");
         return bllMan.generateTeachers();
     }
 }

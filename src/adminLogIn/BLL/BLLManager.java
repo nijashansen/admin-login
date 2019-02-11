@@ -33,7 +33,6 @@ public class BLLManager{
     }
 
     public Teacher generateTeachers() {
-        System.out.println("hej2");
         return teachDAO.generateTeachers();
     }
     

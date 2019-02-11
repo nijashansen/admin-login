@@ -23,7 +23,6 @@ public class TeacherDAO {
     }
     
     public Teacher generateTeachers() {
-        System.out.println("hej1");
         
         Teacher henriksen = new Teacher();
         henriksen.setName("Henriksen");
