@@ -6,6 +6,7 @@
 package adminLogIn.GUI.Controller;
 
 import adminLogIn.DAL.FraværDAO;
+import com.jfoenix.controls.JFXComboBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -44,13 +45,16 @@ public class FraværController implements Initializable
         Label lblModul = new Label();
      
         lblDato.setText(fravær.dato().get(1));
+        lblDato.setTranslateY(4);
         
         lblFag.setText(fravær.fag().get(2));
+        lblFag.setTranslateY(4);
         
         lblModul.setText(fravær.modul().get(0));
+        lblModul.setTranslateY(4);
         
-        ComboBox coBox = new ComboBox(fravær.combBox());
-        coBox.setValue("Vælg fraværs årsag");
+        JFXComboBox coBox = new JFXComboBox(fravær.combBox());
+        coBox.promptTextProperty().setValue("Vælg fraværsårsag");
         
         hBox.getChildren().addAll(lblDato, lblFag, lblModul, coBox);
         
