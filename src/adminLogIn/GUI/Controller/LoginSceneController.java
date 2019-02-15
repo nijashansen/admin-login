@@ -36,6 +36,8 @@ public class LoginSceneController implements Initializable {
     private Model model;
     
     private Teacher teacher;
+    @FXML
+    private ImageView imgviewBanner;
     
     
 
@@ -44,7 +46,9 @@ public class LoginSceneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        imgviewBanner.setImage(new Image("resus/Banner.png"));
         imgviewAvatar.setImage(new Image("resus/Login-avatar.png"));
+        imgviewBanner.setFitWidth(0);
         model = new Model();
         teacher = new Teacher();
         teacher = model.generateTeachers();
