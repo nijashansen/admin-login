@@ -7,10 +7,14 @@ package adminLogIn;
 
 import adminLogIn.DAL.TeacherDAO;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -18,9 +22,31 @@ import javafx.stage.Stage;
  */
 public class OwsMain extends Application {
     
+    private double xOffSet = 0;
+    private double yOffSet = 0;
+    
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("GUI/View/LoginScene.fxml"));
+        
+        stage.initStyle(StageStyle.UNDECORATED);
+        
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffSet = event.getSceneX();
+                yOffSet = event.getSceneY();
+            }
+        });
+        
+        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffSet);
+                stage.setY(event.getScreenY() - yOffSet);
+            }
+        });
         
         Scene scene = new Scene(root);
         
