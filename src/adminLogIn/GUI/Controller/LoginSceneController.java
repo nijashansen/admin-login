@@ -70,8 +70,7 @@ public class LoginSceneController implements Initializable {
             System.out.println("welcome");
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Fravaer.fxml"));
-                Parent root1 ;
-                root1 = (Parent) fxmlLoader.load();
+                Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.initStyle(StageStyle.UNDECORATED);
