@@ -27,9 +27,16 @@ public class FraværController implements Initializable
 
     FraværDAO fravær;
     
-    public void start(Stage stage)
+         
+            
+            
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb)
     {
-        
+        fravær = new FraværDAO();
         AnchorPane Anpane = new AnchorPane();
         Anpane.setLayoutX(100);
         Anpane.setLayoutY(100);
@@ -44,8 +51,10 @@ public class FraværController implements Initializable
         Label lblFag = new Label();
         Label lblModul = new Label();
      
+        System.out.println(fravær.dato());
         lblDato.setText(fravær.dato().get(1));
         lblDato.setTranslateY(4);
+        
         
         lblFag.setText(fravær.fag().get(2));
         lblFag.setTranslateY(4);
@@ -62,18 +71,6 @@ public class FraværController implements Initializable
         
         Scene scene = new Scene(Anpane, 300, 250);
         
-        stage.setTitle("");
-        stage.setScene(scene);
-        stage.show();
-    }        
-            
-            
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
         
     }    
     
