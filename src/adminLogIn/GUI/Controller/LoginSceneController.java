@@ -13,8 +13,10 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -67,20 +69,27 @@ public class LoginSceneController implements Initializable {
         String password = txtfldPassword.getText();
         
         if (username.equals(model.getTeacherID(teacher)) && password.equals(model.getTeacherPassword(teacher))) {
-            System.out.println("welcome");
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Fravaer.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
+                ((Node)event.getSource()).getScene().getWindow().hide();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(this.getClass().getResource("/adminLogIn/GUI/View/Fravaer.fxml"));
+                Parent root1 = (Parent) loader.load();
                 Stage stage = new Stage();
                 stage.initModality(Modality.APPLICATION_MODAL);
-                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initStyle(StageStyle.DECORATED);
                 stage.setTitle("");
                 stage.setScene(new Scene(root1));
                 stage.show();
             } catch (IOException e) {
             }
         } else {
-            System.out.println("incorrect login");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            
+            alert.setTitle("Incorrect input");
+            alert.setHeaderText("TeacherID or Password are incorrect");
+            alert.setContentText("Please confirm your input or contact system administrator");
+            
+            alert.showAndWait();
         }
         
     }
